@@ -87,7 +87,7 @@ $app->get('/forum/{membre_id}', function ($membre_id) use ($app){
 $app->post('/forum/{membre_id}/ajout', function (Request $request, $membre_id) use ($app){
     require '../src/header.php';
     require '../app/voirforum.php';
-    return new Response("<script language='Javascript'>alert('Ajout effectué');document.location.href='/Projet_PHP/www/forum/".$membre_id."';</script>", 200);
+    return new Response("<script language='Javascript'>alert('Ajout effectué');document.location.href='/www/forum/".$membre_id."';</script>", 200);
 });
 
 //Route pour supprimer les topic
@@ -95,7 +95,7 @@ $app->get('/forum/{membre_id}/suppr/{num_topic}', function (Request $request, $m
     $app['session']->set('num_topic', $num_topic);
     require '../src/header.php';
     require '../app/voirforum.php';
-    return new Response("<script language='Javascript'>alert('Suppression effectué');document.location.href='/Projet_PHP/www/forum/".$membre_id."';</script>", 200);
+    return new Response("<script language='Javascript'>alert('Suppression effectué');document.location.href='/www/forum/".$membre_id."';</script>", 200);
 });
 
 //Route pour voir les messages
@@ -121,7 +121,7 @@ $app->get('/forum/{membre_id}/{message_id}', function ($membre_id, $message_id) 
 $app->post('/forum/{membre_id}/{message_id}/ajout', function (Request $request, $membre_id, $message_id) use ($app){
     require '../src/header.php';
     require '../app/voirmessage.php';
-    return new Response("<script language='Javascript'>alert('Ajout effectué');document.location.href='/Projet_PHP/www/forum/".$membre_id."/".$message_id."';</script>", 200);
+    return new Response("<script language='Javascript'>alert('Ajout effectué');document.location.href='/www/forum/".$membre_id."/".$message_id."';</script>", 200);
 });
 
 //Route pour supprimer les messages
@@ -129,7 +129,7 @@ $app->get('/forum/{membre_id}/{message_id}/suppr/{num_message}', function (Reque
     $app['session']->set('num_message', $num_message);
     require '../src/header.php';
     require '../app/voirmessage.php';
-    return new Response("<script language='Javascript'>alert('Suppression effectué');document.location.href='/Projet_PHP/www/forum/".$membre_id."/".$message_id."';</script>", 200);
+    return new Response("<script language='Javascript'>alert('Suppression effectué');document.location.href='/www/forum/".$membre_id."/".$message_id."';</script>", 200);
 });
 
 //Route pour modifier les messages
@@ -149,7 +149,7 @@ $app->post('/forum/{membre_id}/{message_id}/edit/{num_msg}/valider', function (R
     $app['session']->set('valid_msg', 'oui');
     require '../src/header.php';
     require '../app/voirmessage_update.php';
-    return new Response("<script language='Javascript'>alert('Modification effectué');document.location.href='/Projet_PHP/www/forum/".$membre_id."/".$message_id."';</script>", 200);
+    return new Response("<script language='Javascript'>alert('Modification effectué');document.location.href='/www/forum/".$membre_id."/".$message_id."';</script>", 200);
 });
 
 //Profil
@@ -192,13 +192,13 @@ $app->get('/profil/{num_profil}', function ($num_profil) use ($app){
 $app->post('/profil/{num_profil}/modif', function (Request $request, $num_profil) use ($app){
     require '../src/header.php';
     require '../app/voirprofil.php';
-    return new Response("<script language='Javascript'>alert('Modification effectué');document.location.href='/Projet_PHP/www/profil/".$num_profil."';</script>", 200);
+    return new Response("<script language='Javascript'>alert('Modification effectué');document.location.href='/www/profil/".$num_profil."';</script>", 200);
 });
 
 //Retour menu
 $app->get('/admin', function () use ($app){   
     require '../src/header.php'; 
-    return new Response("<script language='Javascript'>document.location.href='/Projet_PHP/www/';</script>", 200);
+    return new Response("<script language='Javascript'>document.location.href='/www/';</script>", 200);
 });
 
 
@@ -209,14 +209,14 @@ $app->get('/admin/page_membre', function () use ($app){
     if ($app['session']->get('admin')==4)
         return $app['twig']->render('liste_membres.html.twig', array('membres'=>$membres));
     else
-        return new Response("<script language='Javascript'>document.location.href='/Projet_PHP/www/';</script>", 200);
+        return new Response("<script language='Javascript'>document.location.href='/www/';</script>", 200);
 });
 
 //Suppression d'un membre
 $app->get('/admin/page_membre/suppr/{num_membre}', function ($num_membre) use ($app){   
     require '../src/header.php'; 
     require '../app/admin/controleur_membres.php';
-    return new Response("<script language='Javascript'>alert('Suppression effectué');document.location.href='/Projet_PHP/www/admin/page_membre';</script>", 200);
+    return new Response("<script language='Javascript'>alert('Suppression effectué');document.location.href='/www/admin/page_membre';</script>", 200);
 });
 
 
@@ -344,21 +344,21 @@ $app->get('/xml', function() use ($app){
     require '../src/header.php';
     require '../src/modeles/modele_messages.php';
     xml_messages();
-    return new Response("Accueil : <a href='/Projet_PHP/www'>Retour</a></br></br>les liens xml (écriture) : <a href='/Projet_PHP/www/xml/topic'>Export de tous les topics</a></br><a href='/Projet_PHP/www/xml/topic/6'>Export des topics de Loisir</a></br><a href='/Projet_PHP/www/xml/messages'>Export de tous les messages</a></br><a href='/Projet_PHP/www/xml/messages/6/30'>Export topic 1 de Loisir</a></br></br>les liens xml (relecture): <a href='/Projet_PHP/www/xml/topic_relecture'>Tous les topics</a></br><a href='/Projet_PHP/www/xml/messages_relecture'>Tous les messages</a></br>");
+    return new Response("Accueil : <a href='/www'>Retour</a></br></br>les liens xml (écriture) : <a href='/www/xml/topic'>Export de tous les topics</a></br><a href='/www/xml/topic/6'>Export des topics de Loisir</a></br><a href='/www/xml/messages'>Export de tous les messages</a></br><a href='/www/xml/messages/6/30'>Export topic 1 de Loisir</a></br></br>les liens xml (relecture): <a href='/www/xml/topic_relecture'>Tous les topics</a></br><a href='/www/xml/messages_relecture'>Tous les messages</a></br>");
 });
 
 $app->get('/xml/topic', function() use ($app){
     require '../src/header.php';
     require '../src/modeles/modele_topic.php';
     xml_topic();
-    return new Response("Export xml effectué ! <a href='/Projet_PHP/www/xml'>Retour</a>");
+    return new Response("Export xml effectué ! <a href='/www/xml'>Retour</a>");
 });
 
 $app->get('/xml/topic/{numero}', function($numero) use ($app){
     require '../src/header.php';
     require '../src/modeles/modele_topic.php';
     xml_topic_by_id($numero);
-    return new Response("Export xml effectué ! <a href='/Projet_PHP/www/xml'>Retour</a>");
+    return new Response("Export xml effectué ! <a href='/www/xml'>Retour</a>");
 });
 
 $app->get('/xml/topic_relecture', function() use ($app){
@@ -373,14 +373,14 @@ $app->get('/xml/messages', function() use ($app){
     require '../src/header.php';
     require '../src/modeles/modele_messages.php';
     xml_messages();
-    return new Response("Export xml effectué ! <a href='/Projet_PHP/www/xml'>Retour</a>");
+    return new Response("Export xml effectué ! <a href='/www/xml'>Retour</a>");
 });
 
 $app->get('/xml/messages/{forum}/{topic}', function($forum, $topic) use ($app){
     require '../src/header.php';
     require '../src/modeles/modele_messages.php';
     xml_message_by_id($forum, $topic);
-    return new Response("Export xml effectué ! <a href='/Projet_PHP/www/xml'>Retour</a>");
+    return new Response("Export xml effectué ! <a href='/www/xml'>Retour</a>");
 });
 
 $app->get('/xml/messages_relecture', function() use ($app){

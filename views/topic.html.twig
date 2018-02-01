@@ -10,21 +10,21 @@
 {% endblock %}
 {% block content %}
 	<p>{{ personnes_connectes }}</p>
-	<p><i>Vous êtes ici : </i><a href ="/Projet_PHP/www/">Index du forum</a>--->Topic {{ nomtopic }}</p>
+	<p><i>Vous êtes ici : </i><a href ="/www/">Index du forum</a>--->Topic {{ nomtopic }}</p>
 	<table id="tableau_tp">
 		{% for elem in letopic %}
 			<tr>
-			<td><img src="/Projet_PHP/www/images/topic.jpg" alt="image"/></td><td><a href="{{membre_id}}/{{ elem.topic_id }}">{{ elem.topic_titre }}<a/></td>
-			<td> Par <a href="/Projet_PHP/www/profil/{{elem.topic_createur}}">{{ elem.topic_createur }}</a></td>
+			<td><img src="/www/images/topic.jpg" alt="image"/></td><td><a href="{{membre_id}}/{{ elem.topic_id }}">{{ elem.topic_titre }}<a/></td>
+			<td> Par <a href="/www/profil/{{elem.topic_createur}}">{{ elem.topic_createur }}</a></td>
 			<td>{{ elem.topic_time }}</td>
 			{% if (rang>1 and pseudo==elem.topic_createur) or rang==4 %}
-				<td><a href="/Projet_PHP/www/forum/{{membre_id}}/suppr/{{elem.topic_id}}">X<a/></td>
+				<td><a href="/www/forum/{{membre_id}}/suppr/{{elem.topic_id}}">X<a/></td>
 			{% endif %}
 			</tr>
 		{% endfor %}
 	</table>
 	{% if rang>1 %}
-	<form method="post" action="/Projet_PHP/www/forum/{{membre_id}}/ajout">
+	<form method="post" action="/www/forum/{{membre_id}}/ajout">
 		<label type="text"> Ajout d'un nouveau topic</label>
 		<input type="text" name="topic_titre"></input>
 		<input type="submit" value="Nouveau sujet" />

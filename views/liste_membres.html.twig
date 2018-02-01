@@ -25,7 +25,7 @@
     <tr>
       <td>{{membre.membre_id}}</td>
       <td>
-        <a href="/Projet_PHP/www/profil/{{membre.membre_id}}">
+        <a href="/www/profil/{{membre.membre_id}}">
         {{membre.membre_pseudo}}</a>
       </td>
       <td>{{membre.membre_avatar}}</td>
@@ -41,7 +41,7 @@
         {% if membre.membre_rang==4 %}Administrateur{% endif %}
       </td>
       <td>
-          <a href="/Projet_PHP/www/admin/page_membre/suppr/{{membre.membre_id}}">
+          <a href="/www/admin/page_membre/suppr/{{membre.membre_id}}">
               X
           </a>
       </td>

@@ -13,7 +13,7 @@ if(isset($_SESSION['pseudo']))
 
 <h1>Forum Projet PHP</h1>
 <?php
-    echo'<main><section><i>Vous êtes ici : </i><a href ="/Projet_PHP/www/">Index du forum</a></section>';
+    echo'<main><section><i>Vous êtes ici : </i><a href ="/www/">Index du forum</a></section>';
     //Initialisation de deux variables
     $totaldesmessages = 0;
     $categorie = NULL;
@@ -58,7 +58,7 @@ if(isset($_SESSION['pseudo']))
     // les forums en détail : description, nombre de réponses etc...
 
         echo'<tr>
-                <td><img src="/Projet_PHP/www/images/message.jpg" alt="message" /></td>
+                <td><img src="/www/images/message.jpg" alt="message" /></td>
                 <td class="titre"><strong>
                     <a href="./forum/'.$data['forum_id'].'">
                     '.stripslashes(htmlspecialchars($data['forum_name'])).'</a></strong>

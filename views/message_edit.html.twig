@@ -8,8 +8,8 @@
 {% endblock %}
 {% block content %}
 	<main id="page">
-		<p><i>Vous êtes ici : </i><a href ="/Projet_PHP/www/">Index du forum</a>---><a href ="/Projet_PHP/www/forum/{{membre_id}}">Topic</a> ---><a href ="/Projet_PHP/www/forum/{{membre_id}}/{{message_id}}">Message</a> ---> Edit</p>
-		<form method="POST" action="/Projet_PHP/www/forum/{{membre_id}}/{{message_id}}/edit/{{num_message}}/valider">
+		<p><i>Vous êtes ici : </i><a href ="/www/">Index du forum</a>---><a href ="/www/forum/{{membre_id}}">Topic</a> ---><a href ="/www/forum/{{membre_id}}/{{message_id}}">Message</a> ---> Edit</p>
+		<form method="POST" action="/www/forum/{{membre_id}}/{{message_id}}/edit/{{num_message}}/valider">
 			<ul>
 				<input type="hidden" name="num_message" value="{{num_message}}" />
 				<li>

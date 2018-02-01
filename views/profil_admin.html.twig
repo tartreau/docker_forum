@@ -8,8 +8,8 @@
 {% endblock %}
 {% block content %}
 	<main id="page">
-		<p><i>Vous êtes ici : </i><a href ="/Projet_PHP/www/">Index du forum</a>--->Profil</p>
-		<form method="POST" action="/Projet_PHP/www/profil/{{membre_id}}/modif">
+		<p><i>Vous êtes ici : </i><a href ="/www/">Index du forum</a>--->Profil</p>
+		<form method="POST" action="/www/profil/{{membre_id}}/modif">
 			<ul>
 				<input type="hidden" name="modifierProfil">
 				<input type="hidden" name="membre_id" value="{{membre_id}}" />
@@ -32,7 +32,7 @@
 				<li>
 					<label>Avatar :</label>
 					<input type="text" name="membre_avatar" value="{{membre_avatar}}" />
-					<p><img src="/Projet_PHP/www/images/avatars/{{membre_avatar}}" alt="avatar"></p>
+					<p><img src="/www/images/avatars/{{membre_avatar}}" alt="avatar"></p>
 				</li>
 				<li>
 					<label>Description :</label>

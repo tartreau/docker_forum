@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /***********
 ***** VIEW - HEADER et NAV
@@ -20,17 +20,17 @@
 
     // Le nav
     echo'<body>';
-    
+
     echo '<nav>';
-    echo '<li><a href="/Projet_PHP/www/api">API Rest</a>|<a href="/Projet_PHP/www/xml">Export XML</a></li>';
+    echo '<li><a href="/www/api">API Rest</a>|<a href="/www/xml">Export XML</a></li>';
     if(!empty($_SESSION['admin'])){
-      echo '<li><a href="/Projet_PHP/www/admin/page_membre">Gérer les membres</a></li>';
+      echo '<li><a href="/www/admin/page_membre">Gérer les membres</a></li>';
     }
     if(empty($_SESSION['connexion'])){
-      echo '<li><a href="/Projet_PHP/www/register">Inscription</a></li>
-          <li><a href="/Projet_PHP/www/connexion">Connexion</a></li>';
+      echo '<li><a href="/www/register">Inscription</a></li>
+          <li><a href="/www/connexion">Connexion</a></li>';
     }else{
-      echo '<li><a href="/Projet_PHP/www/deconnexion">Déconnexion</a></li>';
-      echo '<li><a href="/Projet_PHP/www/profil/'.$_SESSION['id'].'">Éditer mon profil</a></li>';
+      echo '<li><a href="/www/deconnexion">Déconnexion</a></li>';
+      echo '<li><a href="/www/profil/'.$_SESSION['id'].'">Éditer mon profil</a></li>';
     }
     echo'</nav>';

@@ -8,8 +8,8 @@
 {% endblock %}
 {% block content %}
 {% if err==100 %}
-	<p><i>Vous êtes ici</i> : <a href="/Projet_PHP/www/">Index du forum</a> --> Connexion
-	<form method="post" action="/Projet_PHP/www/connexion/redirect">
+	<p><i>Vous êtes ici</i> : <a href="/www/">Index du forum</a> --> Connexion
+	<form method="post" action="/www/connexion/redirect">
 		<fieldset>
 		<legend>Connexion</legend>
 			<p>
@@ -19,25 +19,25 @@
 		</fieldset>
 		<p><input type="submit" value="Connexion" /></p>
 	</form>
-	<a href="/Projet_PHP/www/register">Pas encore inscrit ?</a>
+	<a href="/www/register">Pas encore inscrit ?</a>
 {% elseif err==0 %}
 	<p>La connexion a bien été effectuée ...</p>
-	<p>Cliquez <a href="/Projet_PHP/www/">ici</a> pour revenir à la page d'accueil</p>
+	<p>Cliquez <a href="/www/">ici</a> pour revenir à la page d'accueil</p>
 {% elseif err==1 %}
 	<p>Une erreur s'est produite pendant votre identification.
 	       Vous devez remplir tous les champs</p>
-	<p>Cliquez <a href="/Projet_PHP/www/connexion">ici</a> pour revenir</p>
+	<p>Cliquez <a href="/www/connexion">ici</a> pour revenir</p>
 {% elseif err==2 %}
 	<p>Une erreur s'est produite
         pendant votre identification.<br /> Le mot de passe ou le pseudo
         entré n'est pas correcte.</p>
-    <p>Cliquez <a href="/Projet_PHP/www/connexion">ici</a>
+    <p>Cliquez <a href="/www/connexion">ici</a>
         pour revenir à la page précédente
-        <br /><br />Cliquez <a href="/Projet_PHP/www/">ici</a>
+        <br /><br />Cliquez <a href="/www/">ici</a>
         pour revenir à la page d accueil</p>
 {% elseif err==3 %}
 	<p>Probleme d identification. L'utilisateur n'existe pas dans notre base de donnée </p>
-	<p>Cliquez <a href="/Projet_PHP/www/register">ici</a> pour crée un compte utilisateur</p><br>
-	<p>Cliquez <a href="/Projet_PHP/www/">ici</a> pour revenir à la page d'accueil</p>
+	<p>Cliquez <a href="/www/register">ici</a> pour crée un compte utilisateur</p><br>
+	<p>Cliquez <a href="/www/">ici</a> pour revenir à la page d'accueil</p>
 {% endif %}
 {% endblock %}

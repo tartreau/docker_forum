@@ -20,4 +20,4 @@ Utilisation d'une API Rest en json :
 - méthodes GET, POST et DELETE (messages)
 
 Export XML :
--XML Writer pour écriture et SimpleXML pour la relecture (topic, messages)# docker_forum
+-XML Writer pour écriture et SimpleXML pour la relecture (topic, messages)

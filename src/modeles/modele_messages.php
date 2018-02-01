@@ -39,7 +39,7 @@ function get_all_messages_links(){
         $res['URL']=$_SERVER["REQUEST_SCHEME"].'://'.
         $_SERVER['HTTP_HOST'].
         $_SERVER['CONTEXT_PREFIX'].
-        '/Projet_PHP/www/api/messages/'.$data['message_createur'];
+        '/www/api/messages/'.$data['message_createur'];
     $messages[]=$res;
   }
 
@@ -197,5 +197,5 @@ function xml_relecture_messages()
       }
     echo '</br></br>';
   }
-  echo "<a href='/Projet_PHP/www/xml'>Retour</a>";
+  echo "<a href='/www/xml'>Retour</a>";
 }

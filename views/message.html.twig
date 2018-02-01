@@ -8,7 +8,7 @@
 {% endblock %}
 {% block content %}
 	<p>{{ personnes_connectes }}</p>
-	<p><i>Vous êtes ici : </i><a href ="/Projet_PHP/www/">Index du forum</a>---><a href ="/Projet_PHP/www/forum/{{forum_id}}">Topic {{ titreforum }}</a>--->Messages</p>
+	<p><i>Vous êtes ici : </i><a href ="/www/">Index du forum</a>---><a href ="/www/forum/{{forum_id}}">Topic {{ titreforum }}</a>--->Messages</p>
 
 	{% for elem in letopic %}
 		{% if elem.topic_id==topic_id %}
@@ -19,12 +19,12 @@
 		{% for elem in lesmessages %}
 			{% if elem.topic_id==topic_id and elem.forum_id==forum_id %}
 			<tr>
-				<td><img src="/Projet_PHP/www/images/avatars/{{ elem.message_avatar }}"/></td>
-				<td><a href="/Projet_PHP/www/profil/{{ elem.message_createur }}">{{ elem.message_createur }}<a/></td>
+				<td><img src="/www/images/avatars/{{ elem.message_avatar }}"/></td>
+				<td><a href="/www/profil/{{ elem.message_createur }}">{{ elem.message_createur }}<a/></td>
 				<td>{{ elem.message_time }}</td>
 				{% if (rang>1 and pseudo==elem.message_createur) or rang==4 %}
-					<td><a href="/Projet_PHP/www/forum/{{forum_id}}/{{topic_id}}/suppr/{{ elem.message_id }}">X<a/></td>
-					<td><form method="POST" action="/Projet_PHP/www/forum/{{forum_id}}/{{topic_id}}/edit/{{ elem.message_id }}"><input type="submit" value="Edit"/></form></td>
+					<td><a href="/www/forum/{{forum_id}}/{{topic_id}}/suppr/{{ elem.message_id }}">X<a/></td>
+					<td><form method="POST" action="/www/forum/{{forum_id}}/{{topic_id}}/edit/{{ elem.message_id }}"><input type="submit" value="Edit"/></form></td>
 				{% endif %}
 			</tr>
 			<tr>
@@ -35,7 +35,7 @@
 	</table>
 	{% if rang>1 %}
 	<p>
-		<form method="post" action="/Projet_PHP/www/forum/{{membre_id}}/{{message_id}}/ajout">
+		<form method="post" action="/www/forum/{{membre_id}}/{{message_id}}/ajout">
 			<input type="button" value="G" style="font-weight:bold;" onclick="document.execCommand('bold'); contenu_cache.value=zone_contenu.innerHTML;" />
 			<input type="button" value="I" style="font-style:italic;" onclick="document.execCommand('italic'); contenu_cache.value=zone_contenu.innerHTML;"/>
 			<input type="button" value="S" style="text-decoration:underline;" onclick="document.execCommand('underline'); contenu_cache.value=zone_contenu.innerHTML;"/>
