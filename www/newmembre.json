@@ -1,0 +1,14 @@
+[
+	{
+		"membre_pseudo":"membre_test", 
+		"membre_mdp":"12345e", 
+		"membre_siteweb":"www.test.com", 
+		"membre_avatar":"1513707154.jpg",
+		"membre_email":"jtest@live.fr",
+		"membre_inscrit": "2017-12-19",
+		"membre_description": "Un perso de test",
+	    "membre_localisation": "Marseille",
+	    "membre_derniere_visite": "2017-12-19",
+		"membre_rang": "2"
+	}
+]

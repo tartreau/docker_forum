@@ -1,0 +1,36 @@
+{% extends "BaseTemplate.html.twig" %}
+{% block title %}API Rest{% endblock %}
+{% block lien %}
+{% endblock %}
+{% block h1 %}
+	<h1>API Rest</h1>
+{% endblock %}
+{% block content %}
+	<p><i>Vous êtes ici</i> : <a href="/Projet_PHP/www/">Index du forum</a> --> API</p>
+	<p>Routes - urls (En commandes manuelles ou sur application postman)
+	<ul>
+		<li>GET - Membres : <a href="api/membres">/api/membres</a> 
+			</br></br>Commandes manuelles(Invoke-WebRequest http://laisnej/Projet_PHP/www/api/membres -ContentType "application/json")
+			</br></br>Commandes powershell Windows(Invoke-WebRequest http://laisnej/Projet_PHP/www/api/membres -ContentType "application/json")</br></br></li>
+		<li>GET - Membres par nom : /api/messages/momo</li>
+		<li>GET - Connecté : <a href="api/connectes">/api/connectes</a></li>
+		<li>GET - Topic : <a href="api/topics">/api/topics</a></li>
+		<li>GET - Topics par nom : /api/messages/nomdutopic</li>
+		<li>GET - Messages : <a href="api/messages">/api/messages</a></li>
+		<li>GET - Messages par topic : /api/messages/6</li>
+		<li>POST - Membres : /api/membres 
+			</br></br>Commandes manuelles(curl -i -H "Content-Type: application/json" -X POST -d '{"membre_pseudo":"membre_test", "membre_mdp":"12345e", "membre_siteweb":"www.test.com", "membre_avatar":"1513707154.jpg", "membre_email":"jtest@live.fr", "membre_inscrit": "2017-12-19", "membre_description": "Un perso de test", "membre_localisation": "Marseille", "membre_derniere_visite": "2017-12-19", "membre_rang": "2"} http://laisnej/Projet_PHP/www/api/membres'
+			</br></br>Commandes powershell Windows( Invoke-WebRequest http://laisnej/Projet_PHP/www/api/membres -ContentType "application/json" -Method POST -Body "{"membre_pseudo":"membre_test", "membre_mdp":"12345e", "membre_siteweb":"www.test.com", "membre_avatar":"1513707154.jpg", "membre_email":"jtest@live.fr", "membre_inscrit": "2017-12-19","membre_description": "Un perso de test", "membre_localisation": "Marseille", "membre_derniere_visite": "2017-12-19", "membre_rang": "2"}"))</br></br></li>
+		<li>POST - Messages : /api/messages 
+			</br></br>Commandes manuelles(curl -i -H "Content-Type: application/json" -X POST -d '{
+			"message_contenu":"Lorem ipsum dolor sit amet. Bonjour je suis le nouveau membre popo",
+			"message_createur":"popo", "message_avatar":"index.jpg", "message_time":"16h02 le 31/Dec/2017", "topic_id":"69", "forum_id":"1", "message_createur_id":"1" } http://laisnej/Projet_PHP/www/api/membres')</br></br>Commandes powershell Windows( Invoke-WebRequest http://laisnej/Projet_PHP/www/api/membres -ContentType "application/json" -Method POST -Body "{
+			"message_contenu":"Lorem ipsum dolor sit amet. Bonjour je suis le nouveau membre popo",
+			"message_createur":"popo", "message_avatar":"index.jpg", "message_time":"16h02 le 31/Dec/2017", "topic_id":"69", "forum_id":"1", "message_createur_id":"1" }")</br></br></li>
+		<li>DELETE - Membres  : /api/membres/membre_test
+			</br></br>Commandes manuelles(curl -i -H "Content-Type: application/json" -X "DELETE"
+			http://laisnej/Projet_PHP/www/api/membres/membre_test)
+			</br></br>Commandes powershell Windows( Invoke-WebRequest http://laisnej/Projet_PHP/www/api/membres/membre_test -ContentType "application/json" -Method DELETE</br></br></li>
+		<li>DELETE - Messages  : /api/messages/1 </li>
+	</ul>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "BaseTemplate.html.twig" %}
+{% block lien %}
+    <link rel="stylesheet" href="../../../www/css/main.css" />
+{% endblock %}
+{% block title %}{{ titre }}{% endblock %}
+{% block h1 %}
+	<h1>Message du topic {{ titreforum }}</h1>
+{% endblock %}
+{% block content %}
+	<p>{{ personnes_connectes }}</p>
+	<p><i>Vous êtes ici : </i><a href ="/Projet_PHP/www/">Index du forum</a>---><a href ="/Projet_PHP/www/forum/{{forum_id}}">Topic {{ titreforum }}</a>--->Messages</p>
+
+	{% for elem in letopic %}
+		{% if elem.topic_id==topic_id %}
+			<p>SUJET : {{ elem.topic_titre }}</p>
+		{% endif %}
+	{% endfor %}
+	<table id="tableau_message">
+		{% for elem in lesmessages %}
+			{% if elem.topic_id==topic_id and elem.forum_id==forum_id %}
+			<tr>
+				<td><img src="/Projet_PHP/www/images/avatars/{{ elem.message_avatar }}"/></td>
+				<td><a href="/Projet_PHP/www/profil/{{ elem.message_createur }}">{{ elem.message_createur }}<a/></td>
+				<td>{{ elem.message_time }}</td>
+				{% if (rang>1 and pseudo==elem.message_createur) or rang==4 %}
+					<td><a href="/Projet_PHP/www/forum/{{forum_id}}/{{topic_id}}/suppr/{{ elem.message_id }}">X<a/></td>
+					<td><form method="POST" action="/Projet_PHP/www/forum/{{forum_id}}/{{topic_id}}/edit/{{ elem.message_id }}"><input type="submit" value="Edit"/></form></td>
+				{% endif %}
+			</tr>
+			<tr>
+				<td id="contenu_msg" COLSPAN=5>{{ elem.message_contenu|raw }}</td>
+			</tr>
+			{% endif %}
+		{% endfor %}
+	</table>
+	{% if rang>1 %}
+	<p>
+		<form method="post" action="/Projet_PHP/www/forum/{{membre_id}}/{{message_id}}/ajout">
+			<input type="button" value="G" style="font-weight:bold;" onclick="document.execCommand('bold'); contenu_cache.value=zone_contenu.innerHTML;" />
+			<input type="button" value="I" style="font-style:italic;" onclick="document.execCommand('italic'); contenu_cache.value=zone_contenu.innerHTML;"/>
+			<input type="button" value="S" style="text-decoration:underline;" onclick="document.execCommand('underline'); contenu_cache.value=zone_contenu.innerHTML;"/>
+
+			<select onchange="document.execCommand('ForeColor',false,this.value); contenu_cache.value=zone_contenu.innerHTML;">
+							<option value="black">Noir</option>
+							<option value="red">Rouge</option>
+							<option value="green">Vert</option>
+							<option value="yellow">Jaune</option>
+							<option value="orange">Orange</option>
+							<option value="blue">Bleu</option>
+			</select>
+
+			<label type="text"> Ajouter un nouveau message</label>
+
+			{# Div editable on récupère le contenu innerHTML des différents boutons et on applique le style. On place le contenu de la div editable dans un input caché pour ensuite transmettre les infos dans la BDD #}
+			<div contenteditable name="contedt" id="zone_contenu" onkeyup="contenu_cache.value=this.innerHTML" style="border: black solid 3px ;background-color:white; margin-top:20px; height:250px; "></div>
+			<input type="hidden" name="message_contenu" id="contenu_cache"></input>
+			<input type="submit" value="Nouveau Message" />
+		</form>
+	</p>
+	{% endif %}
+{% endblock %}

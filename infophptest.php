@@ -1,0 +1,4 @@
+bonjour
+<?php
+   phpinfo();
+?>

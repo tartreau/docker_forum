@@ -1,0 +1,35 @@
+{% extends "BaseTemplate.html.twig" %}	
+{% block lien %}
+    <link rel="stylesheet" href="../../www/css/main.css" />
+{% endblock %}
+    {% block content %} 	
+        <main>
+		{% if i==0 %}
+		<div>
+        	<h1>Inscription terminée</h1>
+        	<p>Bienvenue {{pseudo}} vous êtes maintenant inscrit sur le forum</p>
+        	<p>Cliquez <a href="/Projet_PHP/www/">ici</a> pour revenir à la page d accueil</p>
+        </div>
+        {% else %}
+        <div>
+        	<h1>Inscription interrompue</h1>
+       		<p>Une ou plusieurs erreurs se sont produites pendant votre inscription</p>
+        	<p>{{i}} erreur(s)</p>
+        	<p>{{pseudo_erreur1}}</p>
+        	<p>{{pseudo_erreur2}}</p>
+            <p>{{mdp_erreur1}}</p>
+            <p>{{mdp_erreur2}}</p>
+            <p>{{email_erreur1}}</p>
+            <p>{{email_erreur2}}</p>
+            <p>{{description_erreur}}</p>
+            <p>{{avatar_erreur}}</p>
+            <p>{{avatar_erreur1}}</p>
+            <p>{{avatar_erreur2}}</p>
+            <p>{{avatar_erreur3}}</p>
+            <br></br>
+            <footer>Cliquez <a href="/Projet_PHP/www/register">ici</a> pour recommencer</footer>
+            <br></br>
+        </div>
+        {% endif %}
+    	</main>
+    {% endblock %}

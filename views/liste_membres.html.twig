@@ -1,0 +1,52 @@
+{% extends "BaseTemplate.html.twig" %}
+  {% block lien %}
+        <link rel="stylesheet" href="../../www/css/tabstyle.css" />
+  {% endblock %}
+
+{% block h1 %}
+  <h1>Page d'administration</h1>
+{% endblock %}
+{% block content %}
+<table id="jolie" class="centre">
+  <tr>
+    <td width="50"><strong>ID</strong></td>
+      <td width="50"><strong>Pseudo</strong></td>
+      <td width="50"><strong>Avatar</strong></td>
+      <td width="50"><strong>Mail</strong></td>
+      <td width="50"><strong>Site web</strong></td>
+      <td width="50"><strong>Description</strong></td>
+      <td width="50"><strong>Localisation</strong></td>
+      <td width="50"><strong>Date inscription</strong></td>
+      <td width="50"><strong>Dernière connexion</strong></td>
+      <td width="50"><strong>Rang</strong></td>
+
+  </tr>
+  {% for membre in membres %}
+    <tr>
+      <td>{{membre.membre_id}}</td>
+      <td>
+        <a href="/Projet_PHP/www/profil/{{membre.membre_id}}">
+        {{membre.membre_pseudo}}</a>
+      </td>
+      <td>{{membre.membre_avatar}}</td>
+      <td>{{membre.membre_email}}</td>
+      <td>{{membre.membre_siteweb}}</td>
+      <td>{{membre.membre_description}}</td>
+      <td>{{membre.membre_localisation}}</td>
+      <td>{{membre.membre_inscrit}}</td>
+      <td>{{membre.membre_derniere_visite}}</td>
+      <td>
+        {% if membre.membre_rang==2 %}Inscrit{% endif %}
+        {% if membre.membre_rang==3 %}Modérateur{% endif %}
+        {% if membre.membre_rang==4 %}Administrateur{% endif %}
+      </td>
+      <td>
+          <a href="/Projet_PHP/www/admin/page_membre/suppr/{{membre.membre_id}}">
+              X
+          </a>
+      </td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

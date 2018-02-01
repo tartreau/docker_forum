@@ -1,0 +1,25 @@
+{% extends "BaseTemplate.html.twig" %}
+{% block lien %}
+    <link rel="stylesheet" href="../../../../www/css/main.css" />
+{% endblock %}
+{% block title %}Edit Message{% endblock %}
+{% block h1 %}
+	<h1>Edit message</h1>
+{% endblock %}
+{% block content %}
+	<main id="page">
+		<p><i>Vous êtes ici : </i><a href ="/Projet_PHP/www/">Index du forum</a>---><a href ="/Projet_PHP/www/forum/{{membre_id}}">Topic</a> ---><a href ="/Projet_PHP/www/forum/{{membre_id}}/{{message_id}}">Message</a> ---> Edit</p>
+		<form method="POST" action="/Projet_PHP/www/forum/{{membre_id}}/{{message_id}}/edit/{{num_message}}/valider">
+			<ul>
+				<input type="hidden" name="num_message" value="{{num_message}}" />
+				<li>
+				    <label>Message contenu :</label>
+				    <input type="text" name="message_contenu" value="{{message_contenu}}" />
+				</li>
+				<li>
+					<input type="submit" value="Modifier" id="modifier" />
+				</li>
+	    	</ul>
+    	</form>
+	</main>
+{% endblock %}

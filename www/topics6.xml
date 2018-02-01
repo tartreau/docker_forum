@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<topics>
+ <topic topic_id="30">
+  <forum_id>6</forum_id>
+  <topic_titre>topic 1</topic_titre>
+  <topic_createur>momo</topic_createur>
+  <topic_vu>0</topic_vu>
+  <topic_time>15h08 le 02/Dec/2017</topic_time>
+  <topic_genre>genre TEST</topic_genre>
+  <topic_last_post>0</topic_last_post>
+  <topic_first_post>5</topic_first_post>
+  <topic_post>5</topic_post>
+  <topic_createur_id>1</topic_createur_id>
+ </topic>
+ <topic topic_id="31">
+  <forum_id>6</forum_id>
+  <topic_titre>topic 2</topic_titre>
+  <topic_createur>momo</topic_createur>
+  <topic_vu>0</topic_vu>
+  <topic_time>15h08 le 02/Dec/2017</topic_time>
+  <topic_genre>genre TEST</topic_genre>
+  <topic_last_post>0</topic_last_post>
+  <topic_first_post>5</topic_first_post>
+  <topic_post>5</topic_post>
+  <topic_createur_id>1</topic_createur_id>
+ </topic>
+ <topic topic_id="32">
+  <forum_id>6</forum_id>
+  <topic_titre>topic 3</topic_titre>
+  <topic_createur>momo</topic_createur>
+  <topic_vu>0</topic_vu>
+  <topic_time>15h09 le 02/Dec/2017</topic_time>
+  <topic_genre>genre TEST</topic_genre>
+  <topic_last_post>0</topic_last_post>
+  <topic_first_post>5</topic_first_post>
+  <topic_post>5</topic_post>
+  <topic_createur_id>1</topic_createur_id>
+ </topic>
+ <topic topic_id="38">
+  <forum_id>6</forum_id>
+  <topic_titre>topic loisir 4</topic_titre>
+  <topic_createur>momo</topic_createur>
+  <topic_vu>0</topic_vu>
+  <topic_time>12h07 le 08/Dec/2017</topic_time>
+  <topic_genre>genre TEST</topic_genre>
+  <topic_last_post>0</topic_last_post>
+  <topic_first_post>5</topic_first_post>
+  <topic_post>5</topic_post>
+  <topic_createur_id>1</topic_createur_id>
+ </topic>
+ <topic topic_id="39">
+  <forum_id>6</forum_id>
+  <topic_titre>popo</topic_titre>
+  <topic_createur>popo</topic_createur>
+  <topic_vu>0</topic_vu>
+  <topic_time>12h19 le 08/Dec/2017</topic_time>
+  <topic_genre>genre TEST</topic_genre>
+  <topic_last_post>0</topic_last_post>
+  <topic_first_post>5</topic_first_post>
+  <topic_post>5</topic_post>
+  <topic_createur_id>9</topic_createur_id>
+ </topic>
+ <topic topic_id="65">
+  <forum_id>6</forum_id>
+  <topic_titre>nouveau</topic_titre>
+  <topic_createur>momo</topic_createur>
+  <topic_vu>0</topic_vu>
+  <topic_time>19h02 le 27/Dec/2017</topic_time>
+  <topic_genre>non déterminé</topic_genre>
+  <topic_last_post>0</topic_last_post>
+  <topic_first_post>0</topic_first_post>
+  <topic_post>0</topic_post>
+  <topic_createur_id>1</topic_createur_id>
+ </topic>
+ <topic topic_id="67">
+  <forum_id>6</forum_id>
+  <topic_titre>nouveau topic</topic_titre>
+  <topic_createur>momo</topic_createur>
+  <topic_vu>0</topic_vu>
+  <topic_time>20h32 le 27/Dec/2017</topic_time>
+  <topic_genre>non déterminé</topic_genre>
+  <topic_last_post>0</topic_last_post>
+  <topic_first_post>0</topic_first_post>
+  <topic_post>0</topic_post>
+  <topic_createur_id>1</topic_createur_id>
+ </topic>
+</topics>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+ <message message_id="84">
+  <message_contenu>nouveau message 30</message_contenu>
+  <message_createur>momo</message_createur>
+  <message_avatar>index.jpg</message_avatar>
+  <message_time>23h21 le 02/Jan/2018(a été edité)</message_time>
+  <topic_id>30</topic_id>
+  <forum_id>6</forum_id>
+  <message_createur_id>0</message_createur_id>
+ </message>
+ <message message_id="86">
+  <message_contenu>coucou message 3&lt;br&gt;</message_contenu>
+  <message_createur>momo</message_createur>
+  <message_avatar>index.jpg</message_avatar>
+  <message_time>15h27 le 02/Dec/2017</message_time>
+  <topic_id>30</topic_id>
+  <forum_id>6</forum_id>
+  <message_createur_id>1</message_createur_id>
+ </message>
+ <message message_id="88">
+  <message_contenu>coucou</message_contenu>
+  <message_createur>momo</message_createur>
+  <message_avatar>index.jpg</message_avatar>
+  <message_time>12h15 le 08/Dec/2017</message_time>
+  <topic_id>30</topic_id>
+  <forum_id>6</forum_id>
+  <message_createur_id>1</message_createur_id>
+ </message>
+ <message message_id="102">
+  <message_contenu>Bienvenue sur le forum&lt;br&gt;</message_contenu>
+  <message_createur>momo</message_createur>
+  <message_avatar>index.jpg</message_avatar>
+  <message_time>23h21 le 02/Jan/2018(a été edité)</message_time>
+  <topic_id>30</topic_id>
+  <forum_id>6</forum_id>
+  <message_createur_id>1</message_createur_id>
+ </message>
+ <message message_id="92">
+  <message_contenu>Lorem ipsum dolor</message_contenu>
+  <message_createur>momo</message_createur>
+  <message_avatar>index.jpg</message_avatar>
+  <message_time>12h05 le 01/Jan/2018(a été edité)</message_time>
+  <topic_id>30</topic_id>
+  <forum_id>6</forum_id>
+  <message_createur_id>1</message_createur_id>
+ </message>
+ <message message_id="98">
+  <message_contenu>Nouveau message , un test&lt;br&gt;</message_contenu>
+  <message_createur>popo</message_createur>
+  <message_avatar>avatar.jpg</message_avatar>
+  <message_time>12h16 le 01/Jan/2018</message_time>
+  <topic_id>30</topic_id>
+  <forum_id>6</forum_id>
+  <message_createur_id>9</message_createur_id>
+ </message>
+ <message message_id="96">
+  <message_contenu>Nouveau</message_contenu>
+  <message_createur>momo</message_createur>
+  <message_avatar>index.jpg</message_avatar>
+  <message_time>12h59 le 31/Dec/2017</message_time>
+  <topic_id>30</topic_id>
+  <forum_id>6</forum_id>
+  <message_createur_id>1</message_createur_id>
+ </message>
+ <message message_id="97">
+  <message_contenu>Lorem ipsum dolor sit amet&lt;br&gt;</message_contenu>
+  <message_createur>momo</message_createur>
+  <message_avatar>index.jpg</message_avatar>
+  <message_time>12h59 le 31/Dec/2017</message_time>
+  <topic_id>30</topic_id>
+  <forum_id>6</forum_id>
+  <message_createur_id>1</message_createur_id>
+ </message>
+ <message message_id="106">
+  <message_contenu>Bonjour à toi , nouveau membre&lt;br&gt;</message_contenu>
+  <message_createur>test</message_createur>
+  <message_avatar>1513707154.jpg</message_avatar>
+  <message_time>23h45 le 02/Jan/2018</message_time>
+  <topic_id>30</topic_id>
+  <forum_id>6</forum_id>
+  <message_createur_id>10</message_createur_id>
+ </message>
+</message>

@@ -1,0 +1,6 @@
+
+Etape 0 - Placer 'forum_silex' dans le répertoire www/
+Etape 1 - Dans un terminal de commande taper ('composer install') pour récupérer le dossier vendor, placer vendor dans le répertoire 'forum_silex'
+Etape 2 - Modifier les identifiants de la base de donnée (chemin : forum_silex/src/includes/identifiants.php)
+Etape 3 - Importer la base de donnée dans phpMyAdmin (chemin : forum_silex/db)
+Etape 4 - Avec l'aide d'un navigateur internet, aller dans 'forum_silex/www' pour afficher l'accueil

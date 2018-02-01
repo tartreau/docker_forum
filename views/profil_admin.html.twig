@@ -1,0 +1,63 @@
+{% extends "BaseTemplate.html.twig" %}
+{% block lien %}
+    <link rel="stylesheet" href="../../www/css/main.css" />
+{% endblock %}
+{% block title %}{{ titre }}{% endblock %}
+{% block h1 %}
+	<h1>Profil</h1>
+{% endblock %}
+{% block content %}
+	<main id="page">
+		<p><i>Vous êtes ici : </i><a href ="/Projet_PHP/www/">Index du forum</a>--->Profil</p>
+		<form method="POST" action="/Projet_PHP/www/profil/{{membre_id}}/modif">
+			<ul>
+				<input type="hidden" name="modifierProfil">
+				<input type="hidden" name="membre_id" value="{{membre_id}}" />
+				<li>
+				    <label>Nom membre :</label>
+				    <input type="text" name="membre_pseudo" value="{{membre_pseudo}}" />
+				</li>
+				<li>
+          			<label>Mot de passe :</label>
+          			<input type="password" name="membre_mdp" value="{{membre_mdp}}" />
+    			</li>
+				<li>
+				    <label>Email :</label>
+				    <input type="text" name="membre_email" value="{{membre_email}}" />
+				</li>
+				<li>
+					<label>Site web :</label>
+					<input type="text" name="membre_siteweb" value="{{membre_siteweb}}" />
+				</li>
+				<li>
+					<label>Avatar :</label>
+					<input type="text" name="membre_avatar" value="{{membre_avatar}}" />
+					<p><img src="/Projet_PHP/www/images/avatars/{{membre_avatar}}" alt="avatar"></p>
+				</li>
+				<li>
+					<label>Description :</label>
+					<input type="text" name="membre_description" value="{{membre_description}}"/>   
+				</li>
+				<li>
+					<label>Localisation :</label>
+					<input type="text" name="membre_localisation" value="{{membre_localisation}}"/>
+				</li>
+				<li>
+					<label>Inscrit :</label>
+					<input type="date" name="membre_inscrit" value="{{membre_inscrit}}" />
+				</li>
+				<li>
+					<label>Dernière visite :</label>
+					<input type="date" name="membre_derniere_visite" value="{{membre_derniere_visite}}" />
+				</li>
+				<li>
+					<label>Rang :</label>
+					<input type="text" name="membre_rang" value="{{membre_rang}}" />
+				</li>
+				<li>
+					<input type="submit" value="Modifier" id="modifier" />
+				</li>
+	    	</ul>
+    	</form>
+	</main>
+{% endblock %}

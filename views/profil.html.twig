@@ -1,0 +1,51 @@
+{% extends "BaseTemplate.html.twig" %}
+{% block lien %}
+    <link rel="stylesheet" href="../../www/css/main.css" />
+{% endblock %}
+{% block title %}{{ titre }}{% endblock %}
+{% block h1 %}
+	<h1>Profil</h1>
+{% endblock %}
+{% block content %}
+	<main id="page">
+		<p><i>Vous êtes ici : </i><a href ="/Projet_PHP/www/">Index du forum</a>--->Profil</p>
+		<ul id="profil_list">
+			<li>
+			    <label>Nom membre:</label>
+			    <p>{{membre_pseudo}}</p><br>
+			</li>
+			<li>
+			    <label>Email :</label>
+			    <p>{{membre_email}}</p><br>
+			</li>
+			<li>
+				<label>Site web :</label>
+				<p>{{membre_siteweb}}</p><br>
+			</li>
+			<li>
+				<label>Avatar :</label>
+				<p><img src="/Projet_PHP/www/images/avatars/{{membre_avatar}}" alt="avatar"></p><br>
+			</li>
+			<li>
+				<label>Description :</label>
+				<p>{{membre_description}}</p><br>      
+			</li>
+			<li>
+				<label>Localisation :</label>
+				<p>{{membre_localisation}}</p><br>
+			</li>
+			<li>
+				<label>Inscrit :</label>
+				<p>{{membre_inscrit}}</p><br>
+			</li>
+			<li>
+				<label>Dernière visite :</label>
+				<p>{{membre_derniere_visite}}</p><br>
+			</li>
+			<li>
+				<label>Rang :</label>
+				<p>{{membre_rang}}</p><br>
+			</li>
+    	</ul>
+	</main>
+{% endblock %}
