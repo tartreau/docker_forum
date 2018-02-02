@@ -21,3 +21,7 @@ Utilisation d'une API Rest en json :
 
 Export XML :
 -XML Writer pour écriture et SimpleXML pour la relecture (topic, messages)
+
+Docker
+- Utilisation de conteneur Docker : MySQL, PHP, PHPMyAdmin
+- Commande : docker-compose up -d
