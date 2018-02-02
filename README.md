@@ -25,3 +25,4 @@ Export XML :
 Docker
 - Utilisation de conteneur Docker : MySQL, PHP, PHPMyAdmin
 - Commande : docker-compose up -d
+* Démonstration : https://youtu.be/FRYIqJt4Ar0
